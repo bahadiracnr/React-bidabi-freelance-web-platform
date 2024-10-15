@@ -1,0 +1,15 @@
+body {
+  background-color: #010101;
+}
+
+// Renk dizisi
+$colors: black, white, #e60278, #29b2fe;
+
+// color-1, color-2, color-3, ... şeklinde sınıflar oluşturma
+.color {
+  @for $i from 1 through length($colors) {
+    &-#{$i} {
+      color: nth($colors, $i);
+    }
+  }
+}

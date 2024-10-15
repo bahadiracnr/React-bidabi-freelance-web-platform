@@ -1,0 +1,118 @@
+$scroll-background: black; // Kaydırıldığında uygulanacak arka plan rengi
+$scroll-height: 80px; // Kaydırma sonrası header'ın yüksekliği
+$sm-breakpoint: 576px; // Bootstrap sm breakpoint
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  backdrop-filter: blur(11px);
+  margin-left: 10%;
+  margin-top: 1%;
+  position: absolute;
+  width: 80%;
+  height: 80px;
+  transition: all 0.3s ease; // Geçiş animasyonu
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    background: $scroll-background;
+    height: $scroll-height;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000; // Header'ın her zaman üstte kalması için
+  }
+
+  .navbar {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    .navbar-collapse {
+      flex-grow: 1;
+      justify-content: flex-end;
+      margin-right: 0;
+      padding-right: 0;
+    }
+
+    .navbar-nav {
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+
+      .nav-link {
+        color: white !important;
+        font-size: 18px;
+        text-decoration: none;
+        margin: 0 5px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #f50057 !important;
+        }
+      }
+    }
+  }
+
+  .logo-image {
+    width: 138px;
+    height: 38px;
+  }
+
+  @media (max-width: $sm-breakpoint) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    border-radius: 0 !important;
+    background: rgba(0, 0, 0, 0.7);
+    height: $scroll-height;
+    z-index: 1000;
+  }
+}
+
+.drawer-header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.drawer-logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.drawer-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; // Menü öğelerini ortalıyoruz
+}
+
+.menu-text {
+  text-align: center !important;
+  font-size: 18px;
+  color: white !important;
+  margin-bottom: 15px;
+
+  &:hover {
+    color: #f50057 !important;
+    transition: color 0.3s ease;
+  }
+}
+
+.menu-footer {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-size: 14px;
+}

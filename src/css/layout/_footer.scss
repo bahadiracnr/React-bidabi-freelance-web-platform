@@ -1,0 +1,95 @@
+$footer-background-color: #0a0a0a;
+$footer-text-color: #fff;
+$footer-border-color: #ffffff10;
+$footer-link-color: #fff;
+$footer-link-hover-color: #f50057;
+$footer-icon-color: #fff;
+
+.footer {
+  background-color: $footer-background-color;
+  color: $footer-text-color;
+  padding: 20px 0;
+  width: 100%; /* Genişliği tam yap */
+  position: absolute; /* Sayfa içi konumlandırma */
+  margin-top: 100%; /* Üstteki içerik dolduktan sonra alta yaslanır */
+
+  .footer-logo-section {
+    .footer-logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    .footer-info {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+        font-size: 14px;
+
+        i {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .footer-column {
+    h5 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .social-icons {
+    margin-top: 0px;
+
+    a {
+      color: $footer-icon-color;
+      margin-right: 10px;
+      font-size: 20px;
+
+      &:hover {
+        color: $footer-link-hover-color;
+      }
+    }
+  }
+
+  .footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid $footer-border-color;
+
+    .footer-small-logo {
+      width: 100px;
+    }
+    padding-bottom: 0;
+  }
+
+  .app-badges {
+    display: flex;
+    flex-direction: column; /* Butonları dikey olarak hizala */
+    align-items: left; /* Sol hizala */
+    gap: 5px; /* Butonlar arası boşluk */
+
+    .app-badge {
+      width: 140px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .footer-copyright {
+    font-size: 14px !important;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+}

@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Sınıfı */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html,
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  color: #333;
+  line-height: 1.6;
+  height: 100%;
+}
+
+main {
+  flex-grow: 1; /* İçeriği esnek yap */
+}

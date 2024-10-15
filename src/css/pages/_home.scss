@@ -1,0 +1,51 @@
+.FirstBg-Size {
+  height: 100%;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  backdrop-filter: blur(11px);
+  margin-left: 10%;
+  margin-top: 1%;
+  position: absolute;
+  width: 80%;
+  height: 80px;
+}
+
+.brand-carousel {
+  background-color: black; // Arka plan rengi
+  padding: 5px 0;
+  position: absolute;
+  width: 100%;
+  margin-top: 50%;
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .brand-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 140px; // Logolar arasında boşluk
+
+    .brand-item {
+      img {
+        width: 80px; // Logoların genişliği
+        height: auto; // Yüksekliği otomatik ayarlar
+        object-fit: contain; // Görsel boyutunu ayarlar
+      }
+    }
+  }
+}
+
+.FirstBg-Size {
+  width: 100%;
+  height: auto;
+}
